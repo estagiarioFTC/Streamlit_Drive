@@ -124,7 +124,7 @@ fig = px.line(
     y="Resultado por caixa",
     color="CLIENTE",
     markers=True,
-    title="Valor Medio por cliente"
+    title="Retorno menos custos logisticos por cliente"
 )
 st.plotly_chart(
     fig,
