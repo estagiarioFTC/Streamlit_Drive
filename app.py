@@ -28,8 +28,8 @@ SCOPES = [
 ]
 @st.cache_data(ttl=300)
 def carregar_planilha():
-    credentials = service_account.Credentials.from_service_account_file(
-        ARQUIVO_CREDENCIAIS,
+    credentials = service_account.Credentials.from_service_account_info(
+        st.secrets["gcp_service_account"],
         scopes=SCOPES
     )
 
